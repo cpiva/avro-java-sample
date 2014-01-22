@@ -10,6 +10,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.avro.mapred.AvroKey;
 import org.apache.avro.mapreduce.AvroJob;
 import org.apache.avro.mapreduce.AvroKeyOutputFormat;
+import org.apache.avro.generic.GenericRecord;
 
 import example.avro.DistData;
 
@@ -67,12 +68,19 @@ public class ReadOnlyJob {
      * Specify the mapper and reducer classes.
      */
     job.setMapperClass(ReadOnlyMapper.class);
-
+  
     AvroJob.setOutputKeySchema(job, DistData.getClassSchema());
-    job.setMapOutputKeyClass(AvroKey.class);
-    job.setMapOutputValueClass(NullWritable.class);
-
+    //job.setMapOutputKeyClass(AvroKey.class);
+    //job.setMapOutputValueClass(NullWritable.class);
+    //job.setOutputFormatClass(AvroKeyOutputFormat.class);
     job.setNumReduceTasks(0);
+
+
+    //AvroJob.setOutputKeySchema(job, getAvroSchema(schemaFile))
+    job.setOutputFormatClass(AvroKeyOutputFormat.class);
+    job.setOutputKeyClass(AvroKey.class);
+    job.setOutputValueClass(NullWritable.class);
+    FileOutputFormat.setCompressOutput(job, true);
 
     /*
      * Start the MapReduce job and wait for it to finish.
