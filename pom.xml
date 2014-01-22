@@ -41,11 +41,12 @@
       <artifactId>avro</artifactId>
       <version>1.7.5</version>
     </dependency>
-    <dependency>
+<dependency>
       <groupId>org.apache.avro</groupId>
       <artifactId>avro-mapred</artifactId>
-      <version>1.7.5</version>
-    </dependency>     
+      <classifier>hadoop2</classifier>
+      <version>1.7.4</version>
+    </dependency>
      <dependency>
       <groupId>javax.jdo</groupId>
       <artifactId>jdo2-api</artifactId>
@@ -126,7 +127,7 @@
       <plugin>
         <groupId>org.apache.avro</groupId>
         <artifactId>avro-maven-plugin</artifactId>
-        <version>1.7.5</version>
+        <version>1.7.3</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
@@ -153,7 +154,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>ReadOnlyJob</mainClass>
+              <mainClass>WriteAvroMapOnlyJob</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>
