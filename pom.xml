@@ -154,7 +154,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>WriteAvroMapOnlyJob</mainClass>
+              <mainClass>com.cloudera.avro.WriteAvroMapOnlyJob</mainClass>
             </manifest>
           </archive>
           <descriptorRefs>

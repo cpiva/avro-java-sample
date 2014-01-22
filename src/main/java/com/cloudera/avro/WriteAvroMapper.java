@@ -1,19 +1,13 @@
-import java.io.IOException;
-import java.sql.Timestamp;
-import java.util.Date;
-import java.io.File;
+package com.cloudera.avro;
 
-import org.apache.hadoop.io.IntWritable;
+import example.avro.DistData;
+import org.apache.avro.mapred.AvroKey;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
-import org.apache.avro.mapred.AvroKey;
-import org.apache.avro.mapreduce.AvroJob;
-import org.apache.avro.mapreduce.AvroKeyOutputFormat;
-
-import example.avro.DistData;
+import java.io.IOException;
 
 /* 
  * To define a map function for your MapReduce job, subclass 
