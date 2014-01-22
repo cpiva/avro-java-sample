@@ -41,7 +41,7 @@
       <artifactId>avro</artifactId>
       <version>1.7.5</version>
     </dependency>
-<dependency>
+    <dependency>
       <groupId>org.apache.avro</groupId>
       <artifactId>avro-mapred</artifactId>
       <classifier>hadoop2</classifier>
