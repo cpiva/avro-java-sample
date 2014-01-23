@@ -7,11 +7,12 @@ package example.avro;
 @SuppressWarnings("all")
 @org.apache.avro.specific.AvroGenerated
 public class DistData extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DistData\",\"namespace\":\"example.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]}]}");
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"DistData\",\"namespace\":\"example.avro\",\"fields\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"favorite_number\",\"type\":[\"int\",\"null\"]},{\"name\":\"favorite_color\",\"type\":[\"string\",\"null\"]},{\"name\":\"favorite_movie\",\"type\":[\"string\",\"null\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
   @Deprecated public java.lang.CharSequence name;
   @Deprecated public java.lang.Integer favorite_number;
   @Deprecated public java.lang.CharSequence favorite_color;
+  @Deprecated public java.lang.CharSequence favorite_movie;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -23,10 +24,11 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
   /**
    * All-args constructor.
    */
-  public DistData(java.lang.CharSequence name, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color) {
+  public DistData(java.lang.CharSequence name, java.lang.Integer favorite_number, java.lang.CharSequence favorite_color, java.lang.CharSequence favorite_movie) {
     this.name = name;
     this.favorite_number = favorite_number;
     this.favorite_color = favorite_color;
+    this.favorite_movie = favorite_movie;
   }
 
   public org.apache.avro.Schema getSchema() { return SCHEMA$; }
@@ -36,6 +38,7 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
     case 0: return name;
     case 1: return favorite_number;
     case 2: return favorite_color;
+    case 3: return favorite_movie;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -46,6 +49,7 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
     case 0: name = (java.lang.CharSequence)value$; break;
     case 1: favorite_number = (java.lang.Integer)value$; break;
     case 2: favorite_color = (java.lang.CharSequence)value$; break;
+    case 3: favorite_movie = (java.lang.CharSequence)value$; break;
     default: throw new org.apache.avro.AvroRuntimeException("Bad index");
     }
   }
@@ -95,6 +99,21 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
     this.favorite_color = value;
   }
 
+  /**
+   * Gets the value of the 'favorite_movie' field.
+   */
+  public java.lang.CharSequence getFavoriteMovie() {
+    return favorite_movie;
+  }
+
+  /**
+   * Sets the value of the 'favorite_movie' field.
+   * @param value the value to set.
+   */
+  public void setFavoriteMovie(java.lang.CharSequence value) {
+    this.favorite_movie = value;
+  }
+
   /** Creates a new DistData RecordBuilder */
   public static example.avro.DistData.Builder newBuilder() {
     return new example.avro.DistData.Builder();
@@ -119,6 +138,7 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
     private java.lang.CharSequence name;
     private java.lang.Integer favorite_number;
     private java.lang.CharSequence favorite_color;
+    private java.lang.CharSequence favorite_movie;
 
     /** Creates a new Builder */
     private Builder() {
@@ -140,6 +160,10 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
         this.favorite_color = data().deepCopy(fields()[2].schema(), other.favorite_color);
         fieldSetFlags()[2] = true;
       }
+      if (isValidValue(fields()[3], other.favorite_movie)) {
+        this.favorite_movie = data().deepCopy(fields()[3].schema(), other.favorite_movie);
+        fieldSetFlags()[3] = true;
+      }
     }
     
     /** Creates a Builder by copying an existing DistData instance */
@@ -156,6 +180,10 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
       if (isValidValue(fields()[2], other.favorite_color)) {
         this.favorite_color = data().deepCopy(fields()[2].schema(), other.favorite_color);
         fieldSetFlags()[2] = true;
+      }
+      if (isValidValue(fields()[3], other.favorite_movie)) {
+        this.favorite_movie = data().deepCopy(fields()[3].schema(), other.favorite_movie);
+        fieldSetFlags()[3] = true;
       }
     }
 
@@ -234,6 +262,31 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
       return this;
     }
 
+    /** Gets the value of the 'favorite_movie' field */
+    public java.lang.CharSequence getFavoriteMovie() {
+      return favorite_movie;
+    }
+    
+    /** Sets the value of the 'favorite_movie' field */
+    public example.avro.DistData.Builder setFavoriteMovie(java.lang.CharSequence value) {
+      validate(fields()[3], value);
+      this.favorite_movie = value;
+      fieldSetFlags()[3] = true;
+      return this; 
+    }
+    
+    /** Checks whether the 'favorite_movie' field has been set */
+    public boolean hasFavoriteMovie() {
+      return fieldSetFlags()[3];
+    }
+    
+    /** Clears the value of the 'favorite_movie' field */
+    public example.avro.DistData.Builder clearFavoriteMovie() {
+      favorite_movie = null;
+      fieldSetFlags()[3] = false;
+      return this;
+    }
+
     @Override
     public DistData build() {
       try {
@@ -241,6 +294,7 @@ public class DistData extends org.apache.avro.specific.SpecificRecordBase implem
         record.name = fieldSetFlags()[0] ? this.name : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.favorite_number = fieldSetFlags()[1] ? this.favorite_number : (java.lang.Integer) defaultValue(fields()[1]);
         record.favorite_color = fieldSetFlags()[2] ? this.favorite_color : (java.lang.CharSequence) defaultValue(fields()[2]);
+        record.favorite_movie = fieldSetFlags()[3] ? this.favorite_movie : (java.lang.CharSequence) defaultValue(fields()[3]);
         return record;
       } catch (Exception e) {
         throw new org.apache.avro.AvroRuntimeException(e);

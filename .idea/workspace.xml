@@ -2,13 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91cd6088-e6a6-4c1d-8f58-9524b29286d2" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_1_7_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_ipc_1_7_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_ipc_tests_1_7_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_avro_avro_mapred_hadoop2_1_7_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_snappy_snappy_java_1_0_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/part-m-00000.avro" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/App.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadOnlyJob.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadOnlyMapper.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/part-m-00000.avro" afterPath="$PROJECT_DIR$/part-m-00000.avro" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapOnlyJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapOnlyJob.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/avro-java-sample-1.0-SNAPSHOT-jar-with-dependencies.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/avro-java-sample-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/avro/App.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/avro/WriteAvroMapOnlyJob.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/cloudera/avro/WriteAvroMapper.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/example/avro/DistData$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/example/avro/DistData$Builder.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/example/avro/DistData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.cloudera.avro.AppTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/com.cloudera.avro.AppTest.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/com/cloudera/avro/AppTest.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/example/avro/DistData.java" afterPath="$PROJECT_DIR$/src/main/java/example/avro/DistData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/avro-java-sample.iml" afterPath="$PROJECT_DIR$/avro-java-sample.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/avro/schema.avsc" afterPath="$PROJECT_DIR$/src/main/avro/schema.avsc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="avro-java-sample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,16 +97,16 @@
       <file leaf-file-name="schema.avsc" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/avro/schema.avsc">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+            <state line="7" column="29" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteAvroMapper.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WriteAvroMapper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="13" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1026">
+            <state line="47" column="0" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.7950664" vertical-offset="427" max-vertical-offset="1044">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,10 +114,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WriteAvroMapOnlyJob.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="WriteAvroMapOnlyJob.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapOnlyJob.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="435" selection-end="435" vertical-scroll-proportion="0.4177215" vertical-offset="0" max-vertical-offset="1386">
+            <state line="56" column="6" selection-start="1775" selection-end="1775" vertical-scroll-proportion="0.0" vertical-offset="751" max-vertical-offset="1386">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadAvroMapper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadAvroMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="774">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadAvroMapOnlyJob.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadAvroMapOnlyJob.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="57" column="4" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="1440">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,7 +148,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="155" column="22" selection-start="4959" selection-end="4959" vertical-scroll-proportion="0.0" vertical-offset="2447" max-vertical-offset="3294">
+            <state line="156" column="62" selection-start="4989" selection-end="5026" vertical-scroll-proportion="0.0" vertical-offset="2606" max-vertical-offset="3294">
               <folding />
             </state>
           </provider>
@@ -126,10 +167,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/example/avro/DistData.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapOnlyJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadAvroMapOnlyJob.java" />
+        <option value="$PROJECT_DIR$/src/main/avro/schema.avsc" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadAvroMapper.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectFrameBounds">
@@ -287,6 +339,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.cloudera.avro" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
@@ -462,7 +519,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32933334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22666667" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -523,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/avro/DistData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.0" vertical-offset="144" max-vertical-offset="4212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/avro/schema.avsc">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
@@ -555,39 +605,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadAvroMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1300" selection-end="1300" vertical-scroll-proportion="0.0" vertical-offset="77" max-vertical-offset="774">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/avro/schema.avsc">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+        <state line="7" column="29" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="288">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/example/avro/DistData.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapOnlyJob.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="22" selection-start="4548" selection-end="4548" vertical-scroll-proportion="0.9491525" vertical-offset="1416" max-vertical-offset="4212">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="155" column="22" selection-start="4959" selection-end="4959" vertical-scroll-proportion="0.0" vertical-offset="2447" max-vertical-offset="3294">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="13" selection-start="728" selection-end="728" vertical-scroll-proportion="0.0" vertical-offset="256" max-vertical-offset="1026">
+        <state line="56" column="6" selection-start="1775" selection-end="1775" vertical-scroll-proportion="0.0" vertical-offset="751" max-vertical-offset="1386">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapOnlyJob.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="435" selection-end="435" vertical-scroll-proportion="0.4177215" vertical-offset="0" max-vertical-offset="1386">
+        <state line="156" column="62" selection-start="4989" selection-end="5026" vertical-scroll-proportion="0.0" vertical-offset="2606" max-vertical-offset="3294">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/ReadAvroMapOnlyJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="4" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0" vertical-offset="851" max-vertical-offset="1440">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cloudera/avro/WriteAvroMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1586" selection-end="1586" vertical-scroll-proportion="0.7950664" vertical-offset="427" max-vertical-offset="1044">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

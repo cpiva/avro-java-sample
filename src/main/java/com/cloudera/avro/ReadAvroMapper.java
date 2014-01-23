@@ -21,7 +21,7 @@ import java.io.IOException;
  *   type for the reducer)
  */
 
-public class WriteAvroMapper extends Mapper<LongWritable, Text, AvroKey<DistData>, NullWritable> {
+public class ReadAvroMapper extends Mapper<AvroKey<DistData>, NullWritable, AvroKey<DistData>, NullWritable> {
   
   /*
    * The map method runs once for each line of text in the input file.
@@ -29,24 +29,16 @@ public class WriteAvroMapper extends Mapper<LongWritable, Text, AvroKey<DistData
    * Text, and a Context object.
    */
   @Override
-  public void map(LongWritable key, Text value, Context context)
+  public void map(AvroKey<DistData> key, NullWritable value, Context context)
       throws IOException, InterruptedException {
 
-    /*
-     * Convert the line, which is received as a Text object,
-     * to a String object.
-     */
-    String line = value.toString();
-    String[] parts = line.split(" ");
+    key.datum().getName();
+    key.datum().getFavoriteColor();
+    key.datum().getFavoriteNumber();
 
-    AvroKey<DistData> outputKey = new AvroKey<DistData>(new DistData());
+    key.datum().setFavoriteMovie("Oblivion");
 
-    outputKey.datum().setName(parts[0]);
-    outputKey.datum().setFavoriteColor(parts[2]);
-    outputKey.datum().setFavoriteNumber(Integer.parseInt(parts[1]));
-    outputKey.datum().setFavoriteMovie(null);
-
-    context.write(outputKey, null);
+    context.write(key, null);
       
   }
 
