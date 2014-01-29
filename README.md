@@ -3,6 +3,10 @@ avro-java-sample
 
 mvn clean package
 
+mvn exec:java -q -Dexec.mainClass=example.GenerateData
+
+hadoop jar ./target/avro-java-sample-1.0-SNAPSHOT-jar-with-dependencies.jar com.cloudera.avro.MapReduceAvroWordCount /tmp/input/ /tmp/out10/
+
 hadoop jar ./target/avro-java-sample-1.0-SNAPSHOT-jar-with-dependencies.jar com.cloudera.avro.WriteAvroMapOnlyJob /user/cloudera/sample.txt /tmp/out1/
 hadoop jar ./target/avro-java-sample-1.0-SNAPSHOT-jar-with-dependencies.jar com.cloudera.avro.ReadAvroMapOnlyJob /tmp/out1/ /tmp/out2/
 
