@@ -26,3 +26,14 @@ TBLPROPERTIES ('avro.schema.literal'='{"namespace": "dist_data.avro",
                    {"name": "favorite_color", "type": ["string", "null"]},
                    {"name": "favorite_movie", "type": ["string", "null"]}
                 ]}');
+
+
+DROP TABLE IF EXISTS dist_data;
+CREATE EXTERNAL TABLE dist_data
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS
+INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
+OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
+LOCATION '/user/dist_data/files/data_file_out/productMatch/'
+TBLPROPERTIES ( 'avro.schema.url'='hdfs:///user/distdata/schema.json' );
+
+
