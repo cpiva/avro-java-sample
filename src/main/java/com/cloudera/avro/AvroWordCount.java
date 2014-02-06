@@ -36,36 +36,9 @@ import org.apache.hadoop.util.*;
  */
 public class AvroWordCount extends Configured implements Tool {
 
-  public static class Map extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
-    private final static IntWritable one = new IntWritable(1);
-    private Text word = new Text();
-
-    public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter)
-        throws IOException {
-      String line = value.toString();
-      StringTokenizer tokenizer = new StringTokenizer(line);
-      while (tokenizer.hasMoreTokens()) {
-        word.set(tokenizer.nextToken());
-        output.collect(word, one);
-      }
-    }
-  }
-
-  public static class Reduce extends MapReduceBase
-    implements Reducer<Text, IntWritable,
-                       AvroWrapper<Pair<CharSequence, Integer>>, NullWritable> {
-
-    public void reduce(Text key, Iterator<IntWritable> values,
-        OutputCollector<AvroWrapper<Pair<CharSequence, Integer>>, NullWritable> output,
-        Reporter reporter) throws IOException {
-      int sum = 0;
-      while (values.hasNext()) {
-        sum += values.next().get();
-      }
-      output.collect(new AvroWrapper<Pair<CharSequence, Integer>>(
-          new Pair<CharSequence, Integer>(key.toString(), sum)),
-          NullWritable.get());
-    }
+  public static void main(String[] args) throws Exception {
+    int res = ToolRunner.run(new Configuration(), new AvroWordCount(), args);
+    System.exit(res);
   }
 
   public int run(String[] args) throws Exception {
@@ -98,8 +71,35 @@ public class AvroWordCount extends Configured implements Tool {
     return 0;
   }
 
-  public static void main(String[] args) throws Exception {
-    int res = ToolRunner.run(new Configuration(), new AvroWordCount(), args);
-    System.exit(res);
+  public static class Map extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
+    private final static IntWritable one = new IntWritable(1);
+    private Text word = new Text();
+
+    public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter)
+        throws IOException {
+      String line = value.toString();
+      StringTokenizer tokenizer = new StringTokenizer(line);
+      while (tokenizer.hasMoreTokens()) {
+        word.set(tokenizer.nextToken());
+        output.collect(word, one);
+      }
+    }
+  }
+
+  public static class Reduce extends MapReduceBase
+    implements Reducer<Text, IntWritable,
+                       AvroWrapper<Pair<CharSequence, Integer>>, NullWritable> {
+
+    public void reduce(Text key, Iterator<IntWritable> values,
+        OutputCollector<AvroWrapper<Pair<CharSequence, Integer>>, NullWritable> output,
+        Reporter reporter) throws IOException {
+      int sum = 0;
+      while (values.hasNext()) {
+        sum += values.next().get();
+      }
+      output.collect(new AvroWrapper<Pair<CharSequence, Integer>>(
+          new Pair<CharSequence, Integer>(key.toString(), sum)),
+          NullWritable.get());
+    }
   }
 }

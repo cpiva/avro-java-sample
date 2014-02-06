@@ -28,12 +28,12 @@ TBLPROPERTIES ('avro.schema.literal'='{"namespace": "dist_data.avro",
                 ]}');
 
 
-DROP TABLE IF EXISTS dist_data;
-CREATE EXTERNAL TABLE dist_data
+DROP TABLE IF EXISTS your_table;
+CREATE EXTERNAL TABLE your_table
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.avro.AvroSerDe' STORED AS
 INPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerInputFormat'
 OUTPUTFORMAT 'org.apache.hadoop.hive.ql.io.avro.AvroContainerOutputFormat'
-LOCATION '/user/dist_data/files/data_file_out/productMatch/'
-TBLPROPERTIES ( 'avro.schema.url'='hdfs:///user/distdata/schema.json' );
+LOCATION '/user/your_data/'
+TBLPROPERTIES ( 'avro.schema.url'='hdfs:///user/schema/your_data_schema.json' );
 
 

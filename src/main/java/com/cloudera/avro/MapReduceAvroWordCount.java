@@ -42,9 +42,6 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.util.Tool;
 import org.apache.hadoop.util.ToolRunner;
 
-import example.avro.User;
-
-
 /**
  * The classic WordCount example modified to output Avro Pair<CharSequence,
  * Integer> records instead of text.
@@ -100,7 +97,6 @@ public class MapReduceAvroWordCount extends Configured implements Tool {
     AvroJob.setOutputKeySchema(job,
                                Pair.getPairSchema(Schema.create(Type.STRING),
                                                   Schema.create(Type.INT)));
-
     job.setOutputValueClass(NullWritable.class);
 
     job.setMapperClass(Map.class);
